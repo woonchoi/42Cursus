@@ -6,7 +6,11 @@
 /*   By: woonchoi <woonchoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/11 11:28:52 by woonchoi          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2022/05/05 15:55:30 by woonchoi         ###   ########.fr       */
+=======
+/*   Updated: 2021/05/13 15:30:00 by woonchoi         ###   ########.fr       */
+>>>>>>> bdd76eec843f4ecb89de5f522d89a628ea152833
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +21,11 @@ static int	ft_isspace(char c)
 	return ((9 <= c && c <= 13) || c == ' ');
 }
 
+<<<<<<< HEAD
 int	ft_atoi(const char *str)
+=======
+int			ft_atoi(const char *str)
+>>>>>>> bdd76eec843f4ecb89de5f522d89a628ea152833
 {
 	long long	result;
 	long long	result_prev;

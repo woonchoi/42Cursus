@@ -6,7 +6,7 @@
 #    By: woonchoi <woonchoi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/04 22:05:51 by woonchoi          #+#    #+#              #
-#    Updated: 2022/03/09 16:12:10 by woonchoi         ###   ########.fr        #
+#    Updated: 2022/05/08 15:52:03 by woonchoi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ OBJ_DIRS	=	$(addprefix $(OBJ_DIR), $(OBJS))
 PHILO	=	philo
 PHILO_BONUS		=	philo_bonus
 CC		=	gcc
-CFLAGS	=	-Wall -Werror -Wextra
+CFLAGS	=	-Wall -Werror -Wextra -fsanitize=thread
 RM 		=	rm -f
 MKDIR	=	@mkdir -p
 INCLUDE	=	-I ./inc

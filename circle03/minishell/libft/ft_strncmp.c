@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: woonchoi <woonchoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/28 13:13:45 by woonchoi          #+#    #+#             */
-/*   Updated: 2022/03/28 17:17:15 by woonchoi         ###   ########.fr       */
+/*   Created: 2021/05/05 19:06:28 by woonchoi          #+#    #+#             */
+/*   Updated: 2021/05/13 15:31:35 by woonchoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#include "libft.h"
 
-# include "Contact.hpp"
-# include <iomanip>
+int		ft_strncmp(const char *s1, const char *s2, size_t n)
+{
+	unsigned char	*b1;
+	unsigned char	*b2;
 
-class Phonebook {
-
-private:
-	Contact	contacts[8];
-	int		contact_index;
-
-public:
-	Phonebook();
-	void	add_contact(Contact contact);
-	void	search_contact(int index);
-};
-
-#endif
+	b1 = (unsigned char *)s1;
+	b2 = (unsigned char *)s2;
+	if (n == 0)
+		return (0);
+	while (*b1 && (*b1 == *b2) && --n)
+	{
+		b1++;
+		b2++;
+	}
+	return ((int)*b1 - (int)*b2);
+}

@@ -6,7 +6,7 @@
 /*   By: woonchoi <woonchoi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 14:02:04 by woonchoi          #+#    #+#             */
-/*   Updated: 2022/03/20 19:04:07 by woonchoi         ###   ########.fr       */
+/*   Updated: 2022/05/07 14:19:49 by woonchoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void	check_time(t_info *info, int mode)
 	long long	time_cur;
 	long long	temp;
 
+	duration = 0;
 	if (mode == 1)
 		duration = info->time_to_eat;
 	else if (mode == 2)
@@ -38,9 +39,10 @@ void	check_time(t_info *info, int mode)
 	while (!(info->finish))
 	{
 		time_cur = ft_get_time();
-		if (time_cur - time_start >= duration || temp == 1)
+		if (time_cur - time_start >= duration)
 			return ;
 		usleep(temp);
-		temp /= 2;
+		// if (temp > 500)
+			temp /= 2;
 	}
 }
